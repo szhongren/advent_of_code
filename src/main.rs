@@ -1,6 +1,6 @@
 use std::{collections::HashMap, env};
 
-use problems::{day_2::Day2, utils::read_input_to_lines};
+use problems::{day_2::Day2, day_3::Day3, utils::read_input_to_lines};
 
 use crate::problems::{day_1::Day1, utils::Day};
 
@@ -13,6 +13,7 @@ fn main() {
     let solutions: HashMap<&str, Box<dyn Day>> = HashMap::from([
         ("1", Box::new(Day1 {}) as Box<dyn Day>),
         ("2", Box::new(Day2 {}) as Box<dyn Day>),
+        ("3", Box::new(Day3 {}) as Box<dyn Day>),
     ]);
     let args: Vec<String> = env::args().collect();
     let day = &args[1];
